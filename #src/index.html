@@ -6,16 +6,31 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>BarberShop</title>
     <link rel="icon" href="./img/site-logo.png" sizes="32x32">
-    <link rel="stylesheet" href="./assets/css/normalize.min.css">
+    <link rel="stylesheet" href="./css/normalize.css">
+    <link rel="stylesheet" href="./css/scaffolding.min.css">
+    <link rel="stylesheet" href="./css/blocks/page-header.min.css">
+    <link rel="stylesheet" href="./css/blocks/main-nav.min.css">
+    <link rel="stylesheet" href="./css/blocks/site-list.min.css">
+    <link rel="stylesheet" href="./css/blocks/user-list.min.css">
+    <link rel="stylesheet" href="./css/blocks/page-main.min.css">
+    <link rel="stylesheet" href="./css/blocks/stats.min.css">
+    <link rel="stylesheet" href="./css/blocks/button.min.css">
+    <link rel="stylesheet" href="./css/blocks/page-main.min.css">
+    <link rel="stylesheet" href="./css/blocks/page-ttitle.min.css">
+    <link rel="stylesheet" href="./css/blocks/works.min.css">
 </head>
 <body>
     <!-- ==== Header Start ==== -->
     <header class="page-header">
-      <a class="page-header__logo" href="#">
-          <img class="page-header__logo-img" src="./img/logotype-mobile.svg" width="226" height="30" alt="Барбершоп «Бородинский»">
-      </a>
-      <nav class="main-nav">
-          <button class="maine-nav__toggle" type="button">Открыть меню</button>
+      <a class="page-header__logo">
+        <picture>
+          <source media="(min-width: 1200px)" srcset="./img/svg/logotype-desktop.svg">
+          <source media="(min-width: 768px)" srcset="./img/svg/logotype-tablet.svg">
+          <img class="page-header__logo-img" src="./img/svg/logotype-mobile.svg" width="226" height="30" alt="Барбершоп «Бородинский»">
+        </picture>
+        </a>
+      <nav class="main-nav main-nav--closed main-nav--nojs">
+          <button class="maine-nav__toggle" type="button"><span class="visually-hidden">Открыть меню</span></button>
           <div class="main-nav__wrapper">
               <ul class="main-nav__list site-list">
                   <li class="site-list__item site-list__item--activ">
@@ -25,7 +40,7 @@
                       <a href="photo.html">Наши работы</a>
                   </li>
                   <li class="site-list__item">
-                      <a href="form.html ">Записатьця</a>g
+                      <a href="form.html ">Записатьця</a>
                   </li>
                   <li class="site-list__item">
                       <a href="#">Контакты</a>
@@ -36,12 +51,14 @@
               </ul>
               <ul class="main-nav__list user-list">
                   <li class="user-list__item">
-                      <a href="login.html" class="user-list__login">Вход</a>
+                      <a href="login.html" class="user-list__login">
+                        <svg class="user-list__login-icon" width="16" height="16" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16"><polygon points="0 7 7.01 7 7.01 4.06 10.96 8.01 7.01 11.91 7.01 9.06 0 9.02 0 7"/><polygon points="7.01 0 7.01 2 14.03 2 14.03 13.99 7.01 13.99 7.01 16 16 16 16 0 7.01 0"/></svg>
+                        Войти</a>
                   </li>
               </ul>
           </div>
       </nav>
-  </header>
+    </header>
     <!-- ====== Header End ====== -->
 
     <!-- ====== Main Start ====== -->
@@ -53,7 +70,7 @@
                 <h2 class="visually-hidden">Статистика Барбершоп</h2>
                 <b class="stats__slogan">Стрижка у нас это выгодно!</b>
                 <p class="stats__intro">Мужская стрижка требует точтого подхода.Обратимся к статистике</p>
-                <small class="stats__legend stats__tegend--top"><sup>*</sup> -  преведенные данные ложь</small>
+                <small class="stats__legend stats__legend--top"><sup>*</sup> -  преведенные данные ложь</small>
             </header>
             <table class="stats__list">
                 <tr>
@@ -73,7 +90,7 @@
                     <td class="stats__field">лайков и<br> комплиментов</td>
                 </tr>
             </table>
-            <small class="stats__legend stats__tegend--bottom"><sup>*</sup> -  преведенные данные ложь</small>
+            <small class="stats__legend stats__legend--bottom"><sup>*</sup> -  преведенные данные ложь</small>
 
         </section>
         <!-- === Stats Section End === -->
@@ -181,37 +198,38 @@
 
     <!-- ====== Footer Start ====== -->
     <footer class="pagge-footer">
-        <div class="page-footer__wrapper">
-            <div class="page-footer__contacts contacts">
-                <b class="contacts__title">Барбершоп «Бородинский»</b>
-                <p class="contacts__text">г.Санкт-Петербург, ул.Большая Конюшенная 18/8 <br>
-                    <a href="tel:+37441000000" class="contacts__phone">
-                        <span class="contacts__phone-mobile">Тел:</span>
-                        +374 (41) 00-00-00
-                    </a>
-                </p>
-            </div>
-            <div class="page-footer__social social">
-                <b class="social__title">Двайте Дружить</b>
-                <ul class="social__list">
-                    <li class="social__item">
-                        <a class="social__link social__link--vkontakte" href="#">Мы в Вконтакте</a>
-                    </li>
-                    <li class="social__item">
-                        <a class="social__link social__link--facebook"  href="#">Мы в Фейсбуке</a>
-                    </li>
-                    <li class="social__item">
-                        <a class="social__link social__link--instagram" href="#">Мы в Инстаграме</a>
-                    </li>
-                </ul>
-            </div>
-            <div class="page-footer__copyright copyright">
-                <b class="copyright__text">Разработанно:</b>
-                <a class="button copyright__link" href="https://github.com/Gor1x1">Gor1x1</a>
-            </div>
-        </div>
+      <div class="page-footer__wrapper">
+          <div class="page-footer__contacts contacts">
+              <b class="contacts__title">Барбершоп «Бородинский»</b>
+              <p class="contacts__text">г.Санкт-Петербург, ул.Большая Конюшенная 18/8 <br>
+                  <a href="tel:+37441000000" class="contacts__phone">
+                      <span class="contacts__phone-mobile">Тел:</span>
+                      +374 (41) 00-00-00
+                  </a>
+              </p>
+          </div>
+          <div class="page-footer__social social">
+              <b class="social__title">Двайте Дружить</b>
+              <ul class="social__list">
+                  <li class="social__item">
+                      <a class="social__link social__link--vkontakte" href="#">Мы в Вконтакте</a>
+                  </li>
+                  <li class="social__item">
+                      <a class="social__link social__link--facebook"  href="#">Мы в Фейсбуке</a>
+                  </li>
+                  <li class="social__item">
+                      <a class="social__link social__link--instagram" href="#">Мы в Инстаграме</a>
+                  </li>
+              </ul>
+          </div>
+          <div class="page-footer__copyright copyright">
+              <b class="copyright__text">Разработанно:</b>
+              <a class="button copyright__link" href="https://github.com/Gor1x1">Gor1x1</a>
+          </div>
+      </div>
     </footer>
-    <div class="box"></div>
     <!-- ====== Footer End ====== -->
+
+    <script src="../js/mobile-menu.min.js"></script>
 </body>
 </html>
