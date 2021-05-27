@@ -37,7 +37,7 @@ let { src, dest } = require('gulp'),
   include = require("gulp-file-include");
   delet = require("del");
   less = require("gulp-less");
-  autoprefixer = require("gulp-autoprefixer");
+  prefixer = require("gulp-autoprefixer");
   group_media = require("gulp-group-css-media-queries");
   clean_css = require("gulp-clean-css");
   renam = require("gulp-rename");
@@ -59,7 +59,7 @@ let { src, dest } = require('gulp'),
 
   function html() {
     return src(path.src.html)
-    .pipe(include())
+    .pipe(fileinclude())
     .pipe(webphtml())
     .pipe(dest(path.build.html))
     .pipe(browsersync.stream())
@@ -76,7 +76,7 @@ let { src, dest } = require('gulp'),
       group_media()
     )
     .pipe(
-      autoprefixer({
+      autoPrefixer({
         overrideBrowserslist: ["last 5 versions"],
         cascade: true
       })
@@ -94,7 +94,7 @@ let { src, dest } = require('gulp'),
 
   function js() {
     return src(path.src.js)
-    .pipe(include())
+    .pipe(fileinclude())
     .pipe(dest(path.build.js))
     .pipe(
       uglify()
@@ -118,7 +118,7 @@ let { src, dest } = require('gulp'),
     .pipe(dest(path.build.img))
     .pipe(src(path.src.img))
     .pipe(
-      imgmin({
+      imagemin({
         progressive: true,
         svgoPlugins: [{ removeViewBox: false }],
         interlaced: true,
