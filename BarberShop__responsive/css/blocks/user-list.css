@@ -17,7 +17,7 @@
   opacity: 0.3;
 }
 
-.user-list__login-icon polygon {
+.user-list__login-icon path {
   fill: #ffffff;
 }
 
@@ -37,15 +37,15 @@
     opacity: 1;
   }
 
-  .user-list__login:hover .user-list__login-icon polygon {
-    fill: #836550;
+  .user-list__login:hover .user-list__login-icon path {
+    fill: #826550;
   }
 
   .user-list__login:active .user-list__login-icon {
     opacity: 0.3;
   }
 
-  .user-list__login:active .user-list__login-icon polygon {
+  .user-list__login:active .user-list__login-icon path {
     fill: #ffffff;
   }
 
@@ -87,10 +87,10 @@
   }
 
   .user-list__login:hover .user-list__login-icon {
-    opacity: 0;
+    opacity: 0.3;
   }
 
-  .user-list__login:hover .user-list__login-icon polygon {
+  .user-list__login:hover .user-list__login-icon path {
     fill: #000000;
   }
 

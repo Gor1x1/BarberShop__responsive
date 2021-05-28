@@ -38,7 +38,7 @@
 
   opacity: 0.3;
 
-  polygon{
+  path{
     fill: #ffffff;
   }
 }
@@ -58,14 +58,14 @@
     &:hover .user-list__login-icon{
       opacity: 1;
 
-      polygon {
-        fill: #836550;
+      path {
+        fill: #826550;
       }
     }
     &:active .user-list__login-icon{
       opacity: 0.3;
 
-      polygon{
+      path{
         fill: #ffffff;
       }
     }
@@ -109,12 +109,14 @@
 
       background-color: #ffffff;
     }
-    &:hover .user-list__login-icon{
-      opacity: 0;
 
-      polygon{
+    &:hover .user-list__login-icon{
+      opacity: 0.3;
+
+      path {
         fill: #000000;
       }
+
     }
     &:active .user-list__login-icon{
       opacity: 0.1;
