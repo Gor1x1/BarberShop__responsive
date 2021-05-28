@@ -35,7 +35,7 @@
   line-height: 20px;
 }
 
-.stats__tegend--bottom {
+.stats__legend--bottom {
   padding-top: 20px;
   padding-bottom: 14px;
   text-align: center;
@@ -43,8 +43,8 @@
   border-color: #292929;
 }
 
-.stats__tegend--top {
-  display: block;
+.stats__legend--top {
+  display: none;
 }
 
 .stats__legend sup {
@@ -74,7 +74,7 @@
   background-color: #404040;
 }
 
-.stats-value,
+.stats__value,
 .stats__field {
   width: 50%;
   padding: 20px;
@@ -82,13 +82,13 @@
   vertical-align: top;
 }
 
-.stats-value {
+.stats__value {
   padding-right: 0;
   font-size: 40px;
   line-height: 40px;
 }
 
-.stats-value sup {
+.stats__value sup {
   top: -0.35em;
   margin-left: 5px;
 }
@@ -194,7 +194,7 @@
     padding: 0;
   }
 
-  .stats-value {
+  .stats__value {
     margin-bottom: 7px;
     font-size: 72px;
     line-height: 72px;
