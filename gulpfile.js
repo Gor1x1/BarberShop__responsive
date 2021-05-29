@@ -45,6 +45,8 @@ let { src, dest } = require('gulp'),
   imgmin = require("gulp-imagemin");
   webp = require("gulp-webp");
   webphtml = require("gulp-webp-html");
+  ttf2woff = require("gulp-ttf2woff")
+  ttf2woff2 = require("gulp-ttf2woff2")
 
 
   function browserSync(params) {
@@ -129,6 +131,15 @@ let { src, dest } = require('gulp'),
     .pipe(browsersync.stream())
   }
 
+  function fonts() {
+    src(path.src.fonts)
+      .pipe(ttf2woff())
+      .pipe(dest(path.build.fonts));
+    return src(path.src.fonts)
+      .pipe(ttf2woff2())
+      .pipe(dest(path.build.fonts));
+  };
+
   function watchFiles(params) {
     gulp.watch([path.watch.html], html);
     gulp.watch([path.watch.css], css);
@@ -140,9 +151,10 @@ let { src, dest } = require('gulp'),
     return del(path.clean);
   }
 
-  let build = gulp.series(clean, gulp.parallel(js, css, html, images));
+  let build = gulp.series(clean, gulp.parallel(js, css, html, images, fonts));
   let watch = gulp.parallel(build, watchFiles, browserSync);
 
+  exports.fonts = fonts;
   exports.images = images;
   exports.js = js;
   exports.css = css;
