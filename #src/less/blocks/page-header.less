@@ -37,24 +37,17 @@
   .page-header__logo {
     order: 2;
     width: 100%;
-    height: 400px;
+    height: 250px;
 
     background-color: #000000;
     background-image: url(../../img/bg-header.jpg);
     background-repeat: no-repeat;
-    background-position: center -9px;
+    background-position: center;
 
     @media (min-resolution: @retina-dpi), (min-resolution: @retina-dppx) {
       background-image: url("../../img/bg-header@2x.jpg");
       background-size: 1338px auto;
     }
-  }
-  .page-header__logo img {
-    display: block;
-    width: 370px;
-    height: auto;
-    margin: 0 auto;
-    margin-top: 40px;
   }
 }
 
@@ -68,13 +61,11 @@
 
 @media (min-width: @desktop-width) {
   .page-header__logo {
-    height: 648px;
+    height: 250px;
 
     background-position:  center 0;
-    background-size: cover;
-  }
-  .page-header__logo img{
-    margin-top: 57px;
+    background-size: 1538px auto;
+
   }
 }
 
