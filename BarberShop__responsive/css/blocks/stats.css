@@ -100,12 +100,6 @@
   text-align: right;
 }
 
-/* Настройки для block-mock */
-
-.block-mock {
-  height: 390px;
-}
-
 @media (min-width: 768px) {
   .stats {
     width: 640px;
@@ -209,10 +203,6 @@
   .stats__field br {
     display: none;
   }
-
-  .block-mock {
-    height: 469px;
-  }
 }
 
 @media (min-width: 1200px) {
@@ -253,9 +243,5 @@
     display: -ms-flexbox;
     display: flex;
     width: 640px;
-  }
-
-  .block-mock {
-    height: 720px;
   }
 }
