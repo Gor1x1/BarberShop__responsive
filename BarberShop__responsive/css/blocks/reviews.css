@@ -1,6 +1,23 @@
 .reviews {
+  position: relative;
   background-color: #f8f5f2;
   color: #000000;
+}
+
+.reviews::after {
+  content: "";
+  position: absolute;
+  right: 0;
+  bottom: -33px;
+  z-index: 10;
+  width: 100%;
+  height: 34px;
+  background-image: -webkit-gradient(linear, left bottom, right top, color-stop(50%, transparent), color-stop(50%, #f8f5f2)), -webkit-gradient(linear, right bottom, left top, color-stop(50%, transparent), color-stop(50%, #f8f5f2));
+  background-image: -o-linear-gradient(bottom left, transparent 50%, #f8f5f2 50%), -o-linear-gradient(bottom right, transparent 50%, #f8f5f2 50%);
+  background-image: linear-gradient(to top right, transparent 50%, #f8f5f2 50%), linear-gradient(to top left, transparent 50%, #f8f5f2 50%);
+  background-repeat: no-repeat;
+  background-position: 0 0, 100% 0;
+  background-size: 50.1% 100%;
 }
 
 .reviews__wrapper {
