@@ -37,15 +37,8 @@
   .contacts__text{
     color: rgb(212, 212, 212);
   }
-  .contacts__phone-wrapper{
-    .contacts__phone{
-      text-decoration: none;
-      font-size: 18px;
-      line-height: 27px;
-      color: #ffffff;
-      font-weight: 700;
-      text-align: center;
-    }
+  .contacts{
+
     .contacts__phone-mobile{
       display: none;
     }
@@ -55,6 +48,14 @@
     padding: 13px 15px 10px;
     margin-bottom: 26px;
     transform: translate(-45px);
+  }
+  .contacts__phone{
+    text-decoration: none;
+    font-size: 18px;
+    line-height: 27px;
+    color: #ffffff;
+    font-weight: 700;
+    text-align: center;
   }
 }
 
@@ -72,7 +73,7 @@
 
   li{
     border: 0.2px solid rgba(110, 110, 110, 0.5);
-    padding: 32px;
+    padding: 38px;
     &:last-child,
     &:first-child{
       border-right: none;
@@ -103,4 +104,88 @@
   font-weight: 700;
   text-align: center;
   margin-bottom: 24px;
+}
+
+@media (min-width: @tablet-width) {
+
+  .page-footer__wrapper{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    border: none;
+
+    .contacts{
+      width: 321px;
+      text-align: start;
+      line-height: 0;
+      order: 1;
+      .contacts__phone{
+        color: rgb(212, 212, 212);
+        font-weight: 400;
+      }
+    }
+
+    .copyright{
+      order: 2;
+    }
+
+    .copyright{
+      width: 20%;
+    }
+
+    .social{
+      width: 81%;
+      order: 3;
+
+      li{
+        width: 100%;
+        padding: 15px;
+        text-align: center;
+
+        &:last-child{
+          border-right: 0.2px solid rgba(110, 110, 110, 0.5);
+        }
+      }
+    }
+    .contacts__phone-wrapper{
+      border: none;
+    }
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .page-footer__wrapper{
+    display: flex;
+    flex-wrap: nowrap;
+    border: none;
+
+    .contacts{
+      order: 1;
+    }
+
+    .social{
+      padding-top: 10px;
+      width: 20%;
+      order: 2;
+      svg{
+        height: 20px;
+        width: 20px;
+      }
+      .social__title{
+        display: block;
+        text-align: center;
+        font-size: 18px;
+        line-height: 27px;
+        color: #ffffff;
+        font-weight: 400;
+        text-align: center;
+      }
+    }
+
+    .copyright{
+      width: 160px;
+      order: 3;
+    }
+  }
+
 }
