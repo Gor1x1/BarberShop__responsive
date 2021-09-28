@@ -78,6 +78,10 @@
     width: 640px;
   }
 
+  .reviews::after {
+    content: none;
+  }
+
   .reviews__title-wrapper {
     display: -webkit-box;
     display: -ms-flexbox;
